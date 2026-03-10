@@ -32,7 +32,7 @@ INSTALLED_APPS = [
 AUTH_USER_MODEL = "account.CustomUser"
 
 AUTHENTICATION_BACKENDS = [
-    'myapp.backends.EmailBackend',         
+    'account.backends.EmailBackend',         
     'django.contrib.auth.backends.ModelBackend', 
 ]
 
@@ -51,7 +51,7 @@ ROOT_URLCONF = 'custom_authentication.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
